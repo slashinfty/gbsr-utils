@@ -39,4 +39,12 @@ $(document).ready(() => {
     else if (entry === undefined || entry === null || entry === '' || entry.endsWith('.') || entry.endsWith(':')) $('#destination-time').val('');
     else convert(entry);
   });
+  
+  $('#source-platform').change(() => {
+    if ($('#source-time').val() != undefined && $('#source-time').val() != null && $('#source-time').val() != '') convert($('#source-time').val());
+  });
+  
+  $('#destination-platform').change(() => {
+    if ($('#source-time').val() != undefined && $('#source-time').val() != null && $('#source-time').val() != '') convert($('#source-time').val());
+  });
 });
